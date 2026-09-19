@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - Student Management System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="navbar">
+    <h1>🎓 Student Management System</h1>
+    <div class="nav-right">
+        <span id="welcome-user"></span>
+        <button onclick="logout()">Logout</button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="toolbar">
+        <input type="text" id="search-input" placeholder="Search by name, roll no, email, course...">
+        <a href="add_student.html" class="btn-add">+ Add Student</a>
+    </div>
+
+    <div id="alert-box" class="alert alert-error"></div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Roll No</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Course</th>
+                <th>Year</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody id="student-table-body">
+            <!-- Rows injected by JS -->
+        </tbody>
+    </table>
+    <div id="empty-state" class="empty-state" style="display:none;">No students found.</div>
+</div>
+
+<script src="js/api.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
